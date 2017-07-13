@@ -18,17 +18,17 @@ public class FileDownloadServlet extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // 设置请求体的字符编码和响应的内容类型
         req.setCharacterEncoding("UTF-8");
-        resp.setContentType("text/html;charset=UTF-8");
+        resp.setContentType("application/octet-stream");
         
-        String dirName = "/Users/caiwenlong/Documents/Eclipse/workspace/digitalweb/WebRoot/images";
-        String fileName = "boy副本.jpg";
+        String dirName = "/Users/caiwenlong/Documents/Eclipse/workspace/digitalweb/WebRoot/images"; // 目录名
+        String fileName = "boy副本.jpg"; // 文件名
         
         // 文件以附件形式在客户端浏览器下载
         resp.setHeader("Content-Disposition", "attachment; filename="
                 // 如果文件名包含中文，则必须转码
                 + new String(fileName.getBytes(), "ISO-8859-1"));
         
-        // 读写
+        // 读写文件
         InputStream in = new FileInputStream(dirName + "/" + fileName);
         OutputStream out = resp.getOutputStream();
         int b = -1;
