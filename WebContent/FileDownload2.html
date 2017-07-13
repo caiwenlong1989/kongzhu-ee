@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>文件下载示例Demo</title>
+</head>
+<body>
+<table border="1">
+	<tr><td colspan="2" align="center">单个文件下载</td></tr>
+	<tr>
+		<td>Linux x86</td>
+		<td><a href="FileDownloadServlet?fileName=jdk-8u131-linux-i586.tar.gz">jdk-8u131-linux-i586.tar.gz</a></td>
+	</tr>
+	<tr>
+		<td>Linux x64</td>
+		<td><a href="FileDownloadServlet?fileName=jdk-8u131-linux-x64.tar.gz">jdk-8u131-linux-x64.tar.gz</a></td>
+	</tr>
+	<tr>
+		<td>Mac OS X</td>
+		<td><a href="FileDownloadServlet?fileName=jdk-8u131-macosx-x64.dmg">jdk-8u131-macosx-x64.dmg</a></td>
+	</tr>
+	<tr>
+		<td>Windows x86</td>
+		<td><a href="FileDownloadServlet?fileName=jdk-8u131-windows-i586.exe">jdk-8u131-windows-i586.exe</a></td>
+	</tr>
+	<tr>
+		<td>Windows x64</td>
+		<td><a href="FileDownloadServlet?fileName=jdk-8u131-windows-x64.exe">jdk-8u131-windows-x64.exe</a></td>
+	</tr>
+</table>
+<form action="BatchFileDownloadServlet" method="post">
+<table border="1">
+	<tr><td colspan="2" align="center">批量文件下载</td></tr>
+	<tr>
+		<td><img alt="" src="/pic/upload/20170712/Chrysanthemum.jpg" width="128px" height="48px"></td>
+		<td><input type="checkbox" name="fileName" value="Chrysanthemum.jpg"/> 菊花.jpg</td>
+	</tr>
+	<tr>
+		<td><img alt="" src="/pic/upload/20170712/Desert.jpg" width="128px" height="48px"></td>
+		<td><input type="checkbox" name="fileName" value="Desert.jpg"/> 沙漠.jpg</td>
+	</tr>
+	<tr>
+		<td><img alt="" src="/pic/upload/20170712/Hydrangeas.jpg" width="128px" height="48px"></td>
+		<td><input type="checkbox" name="fileName" value="Hydrangeas.jpg"/> 八仙花.jpg</td>
+	</tr>
+	<tr>
+		<td><img alt="" src="/pic/upload/20170712/Jellyfish.jpg" width="128px" height="48px"></td>
+		<td><input type="checkbox" name="fileName" value="Jellyfish.jpg"/> 水母.jpg</td>
+	</tr>
+	<tr>
+		<td><img alt="" src="/pic/upload/20170712/Koala.jpg" width="128px" height="48px"></td>
+		<td><input type="checkbox" name="fileName" value="Koala.jpg"/> 考拉.jpg</td>
+	</tr>
+	<tr>
+		<td><img alt="" src="/pic/upload/20170712/Penguins.jpg" width="128px" height="48px"></td>
+		<td><input type="checkbox" name="fileName" value="Penguins.jpg"/> 企鹅.jpg</td>
+	</tr>
+	<tr>
+		<td><img alt="" src="/pic/upload/20170712/Tulips.jpg" width="128px" height="48px"></td>
+		<td><input type="checkbox" name="fileName" value="Tulips.jpg"/> 郁金香.jpg</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input type="submit" value="批量下载"/></td>
+	</tr>
+</table>
+</form>
+</body>
+</html>
