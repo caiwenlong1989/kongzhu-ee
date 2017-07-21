@@ -22,8 +22,11 @@ import org.apache.tomcat.util.http.fileupload.FileUploadBase.FileSizeLimitExceed
 @SuppressWarnings("serial")
 @WebServlet("/FileUploadServlet")
 // 添加该注释，提供对上传文件的支持
-// maxFileSize设置上传的文件最大值，5M
-@MultipartConfig(maxFileSize=5242880)
+// location文件系统上目录的绝对路径，不支持应用上下文的相对路径，用于存储临时文件
+// fileSizeThreshold临时文件大小阀值
+// maxFileSize允许的上传文件的最大值，5M
+// maxRequestSize允许的multipart/form-data的最大值
+@MultipartConfig(fileSizeThreshold=1024*1024, maxFileSize=1024*1024*5, maxRequestSize=1024*1024*5*5)
 public class FileUploadServlet extends HttpServlet {
 
     @Override
